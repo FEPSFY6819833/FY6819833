@@ -42,13 +42,13 @@
   .mySlides {display:none;}
   </style>
   <body style="background-color:#FFFFFF;margin-left:50px;">
-  <h3 id="Abstract">Abstract</h3>
+  <h3 id="ABSTRACT">ABSTRACT</h3>
 
 <p class="ex1">
   <pre>
-    This work presents an overview of the history of electric propulsion from its dawn in the early 20th century to 
-    its near future propelling humans where no one has gone before, touches on the basics of rocketry — summarising 
-    the Ideal Rocket Equation - <math display="block" class="tml-display" style="display:block math;">
+This work presents an overview of the history of electric propulsion from its dawn in the early 20th century to 
+its near future propelling humans where no one has gone before, touches on the basics of rocketry — summarising 
+the Ideal Rocket Equation - <math display="block" class="tml-display" style="display:block math;">
   <mrow>
     <mi>D</mi>
     <mi>e</mi>
@@ -96,31 +96,39 @@
     </mstyle>
   </mrow>
 </math>
-    - while highlighting the importance of I<sub>sp</sub>. 
-    After having introduced the fundamentals, this article covers both the theory behind, and examples of real-world 
-    implementations of two different types of electric propulsion thrusters such as the Field Emission Electric Propulsion
-    thruster and the Hall-Effect Thruster. 
+- while highlighting the importance of I<sub>sp</sub>. 
+After having introduced the fundamentals, this article covers both the theory behind, and examples of real-world 
+implementations of two different types of electric propulsion thrusters such as the Field Emission Electric Propulsion
+thruster and the Hall-Effect Thruster. 
   </pre>
   </p>
 <hr>
-    <h3 id="Introduction">Introduction</h3>
+    <h3 id="INTRODUCTION">INTRODUCTION</h3>
     <p class="ex1">
       <pre>
-        Electric Propulsion is a field that has shown extreme growth in recent years, with almost 7000 (Lev, 2019), (McDowell, n.d.) 
-	systems launched since 2019 alone, a number that is set to more than double by the end of the decade (Henry, 2019). 
-	Thrusters vary from micronewton thrusters drawing tens of watts, to thousands of watts, using unusual propellants such 
-	as liquid caesium or supercritical xenon, for applications ranging from 3U cubesats, to NASA’s 18 metric ton Lunar Gateway
-	space station. This article will provide a general overview of the fundamentals of electric propulsion, and take a closer 
-	look at two implementations, Field-Emission Electric Propulsion, and Hall-Effect thrusters, using the IFM 350 Nano Thruster &
-	the NASA GRC / Aerojet Rocketdyne Advanced Electric Propulsion System as reference designs for each implementation, respectively.
+Electric Propulsion is a field that has shown extreme growth in recent years, with almost 7000 (Lev, 2019), (McDowell, n.d.) 
+systems launched since 2019 alone, a number that is set to more than double by the end of the decade (Henry, 2019). 
+Thrusters vary from micronewton thrusters drawing tens of watts, to thousands of watts, using unusual propellants such 
+as liquid caesium or supercritical xenon, for applications ranging from 3U cubesats, to NASA’s 18 metric ton Lunar Gateway
+space station. This article will provide a general overview of the fundamentals of electric propulsion, and take a closer 
+look at two implementations, Field-Emission Electric Propulsion, and Hall-Effect thrusters, using the IFM 350 Nano Thruster &
+the NASA GRC / Aerojet Rocketdyne Advanced Electric Propulsion System as reference designs for each implementation, respectively.
       </pre>
   </p>
 
 <hr>
-    <h3 id="History">History</h3>
+    <h3 id="HISTORY">HISTORY</h3>
 	  <p class="ex1">
       <pre>
-
+First theorized in 1911 by Konstantin Tsiolkovsky, it took until 1964 for the first use of an electric thruster on an operational 
+spacecraft — the Soviet Zond-2 (Antropov, 2017), with the first use on a commercial spacecraft almost 20 years later in 1981 (Mirtich, 1984).
+However, it took until the launch of USA-214 / AEHF-1 in 2010, the first in a constellation of 6 geostationary satellites that form 
+a secure communications network operated by the United States Space Force, for the use of electric propulsion — which will henceforth
+be referred to as EP — to really take off. AEHF-1 demonstrated the viability of a fully electric transfer to GEO after its primary
+chemical engine failed. When this occurred, the joint-USAF/Lockheed Martin team had to come up with a plan to use the spacecraft’s
+4.5kW Hall Effect Thruster, which was originally only intended to be used during the second phase of the spacecraft’s ascent to 
+geostationary orbit, to take the spacecraft the entire way there from its transfer orbit, a plan that ended up taking 11 months 
+longer than the original trajectory. (Ray, 2010), (Ray, 2011) 
       </pre>
   </p>
 <hr>
@@ -128,7 +136,7 @@
 	  
 	  <p class="ex1">
       <pre>
-
+ADD HERE WITH EQS
       </pre>
   </p>
 
@@ -137,14 +145,75 @@
 	  <h4 id="Theory of FEEPs">Theory of FEEPs</h4>
 	  <p class="ex1">
       <pre>
+FEEP thrusters are mechanically simple, and can be manufactured at extremely small sizes, operating via an extremely high voltage 
+being applied across a sharp needle, which generates a Taylor-cone at the tip, spraying the propellant, which is usually a liquid 
+metal such as Gallium or Indium out at high velocities, which at high enough field strengths — 10<sup>10</sup> Vm<sup>-1</sup> or greater — evaporates 
+and ionizes the liquid metal, accelerating it towards the extractor electrode, spraying it out at over 100kms<sup>-1</sup> , allowing a specifiC
+impulse of several thousand seconds, albeit at a thrust ranging from several µN to around 1mN (Bock, 2014)
+	      
+The thrust F and specific impulse I_sp of a FEEP can be approximated with the two equations below, where I is the net current,
+Ve is the potential over the emitter, qe/m is the mass-to-charge ratio of a single ion of the propellant, and g0 is the standard gravity. 
+f is a factor that accounts for beam spread, and η is the mass efficiency of the thruster. (Vasiljevich, 2008)
+
+PUT EQS HERE
+      </pre>
+	  
+	  <h4 id="Practical Applications">Practical Applications</h4>
+	  <p class="ex1">
+      <pre>
+A full implementation of the FEEP concept, the IFM 350 Nano, is a 190 times flight proven design as of May 2024 (Krejci, 2024). 
+At its base is 28 needles, operating in a similar concept to the thruster illustrated above. The IFM Nano is sold as a 0.8U 
+(0.8U being 80mmx80mmx80mm), with integrated ion emitters (the needles), propellant reservoir, neutralizer, and power processing
+unit. At this size, it can be easily integrated into a CubeSat bus. It can operate at wattages ranging from 10 to 40W, with a
+peak thrust of 0.42mN with a resultant specific impulse of 3200s when supplied with 40W of power, but by dropping down to 30W
+a lower thrust of 0.25mN can be provided at an Isp of 5000s (D. Krejci, 2018). The neutralizer is required, on this and most
+other electric thrusters, to make the exhaust of the thruster neutrally charged, so that it does not result in a negative charge 
+building up on the spacecraft. This would in turn would result in ions from the exhaust being drawn back to the spacecraft, 
+causing reduced thrust and erosion on the spacecraft. (Patterson, 2015) 
+      </pre>
+  </p>
+
+	  <hr>
+    <h3 id="HALL-EFFECT THRUSTERS">HALL-EFFECT THRUSTERS</h3>
+	  <h4 id="Theory of HETs">Theory of HETs</h4>
+	  <p class="ex1">
+      <pre>
+One of the primary mechanisms in the functionality of a Hall-Effect thruster is the titular Hall-Effect. The cathode generates
+electrons which are attracted to the anode which has been charged to an extremely high potential by the thruster’s Power Processing Unit.
+As the electrons move towards the anode, they encounter an extremely strong magnetic field, which is being produced by the magnetizing 
+coils. The electrons are caught in this magnetic field and flow in a circular motion through the channel in the thruster.
+This curved motion is caused by the Hall Effect.
+	      
+ An inert gas, such as xenon or krypton is then injected into the channel through the anode. The aforementioned trapped electrons
+collide with the propellant, positively ionizing it. These ions are accelerated out of the channel to an extremely high velocity
+by the electric field created by the trapped electrons cathode and upon exiting the channel become neutrally charged by electrons
+from the cathode, creating a plume of neutrally charged plasma. 
 
       </pre>
 	  
 	  <h4 id="Practical Applications">Practical Applications</h4>
 	  <p class="ex1">
       <pre>
-
+The L3 Harris Aerojet Rocketdyne Advanced Electric Prolusion System, developed in partnership with the NASA Glenn Research Center 
+and the Jet Propulsion Laboratory, is the highest power flight-rated hall effect thruster ever built, operating at a peak of 12.5 
+kilowatts with a maximum I<sub>sp</sub> of 2826s and a peak thrust of 611mN (Frieman, 2021). 3 of these engines, along with 4 significantly 
+smaller BHT-6000s will propel NASA’s Gateway lunar space station when it launches in 2027.
       </pre>
+	  <hr>
+    <h3 id="Conclusion">Conclusion</h3>
+	  
+	  <p class="ex1">
+      <pre>
+By taking a closer look at Field Emission Electric Propulsion and Hall-Effect thrusters, we can see that electric propulsion is 
+a widely scalable and versatile technology, that comes in many shapes and sizes, with significantly differing propellants, and
+ways of functioning. This is a technology that will continue to be used for many years to come, as for many situations it is 
+simply the best possible solution. In the near future they will continue to be either cost-optimized or thrust optimized, as 
+more and more internet megaconstellations are launched into orbit, needing satellites with low-cost electric propulsion, 
+and space agencies build larger and heavier vessels of exploration, needing larger engines to be powered by far more powerful 
+power sources. In the longer term, we may see more unusual technologies mature, such as variable specific impulse magnetoplasma 
+rockets, and gain widespread adoption in the satellite industry.
+      </pre>
+  </p>
   </p>
 <hr>
 <p class="ex1">
@@ -154,13 +223,38 @@
 		<th><h3>Table of contents</h3></th>
 	</tr>
 	<tr>
-		<td><a href="Abstract">Abstract</td>
+		<td><a href="ABSTRACT">ABSTRACT</td>
 	</tr>
 	<tr>
-		<td><a href="Introduction">Introduction</td>
+		<td><a href="INTRODUCTION">INTRODUCTION</td>
 	</tr>
 	<tr>
-		<td><a href="Analysis and Discussion">Analysis and Discussion</td>
+		<td>History<a href="HISTORY"></td>
+	</tr>
+	<tr>
+		<td>THEORY OF ROCKETRY<a href="THEORY OF ROCKETRY"></td>
+	</tr>
+	<tr>
+		<td>FIELD EMISSION ELECTRIC PROPULSION THRUSTERS<a href="FIELD EMISSION ELECTRIC PROPULSION THRUSTERS"></td>
+	</tr>
+	<tr>
+		<td>Theory of FEEPs<a href="Theory of FEEPs"></td>
+	</tr>
+	<tr>
+		<td>Practical Applications<a href="Practical Applications"></td>
+	</tr>
+	<tr>
+		<td>HALL-EFFECT THRUSTERS<a href="HALL-EFFECT THRUSTERS"></td>
+	</tr>
+	<tr>
+		<td>Theory of HETs<a href="Theory of HETs"></td>
+	</tr>
+	<tr>
+		<td>Practical Applications<a href="Practical Applications"></td>
+	</tr>
+
+	<tr>
+		<td>CONCLUSION<a href="CONCLUSION"></td>
 	</tr>
 	<tr>
 		<td><a href="References">References</td>
