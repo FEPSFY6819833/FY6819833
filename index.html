@@ -107,7 +107,7 @@ thruster and the Hall-Effect Thruster.
     <p class="ex1">
       <pre>
 Electric Propulsion is a field that has shown extreme growth in recent years, with almost 7000 <a href="#References">(Lev, 2019), (McDowell, n.d.)</a> 
-systems launched since 2019 alone, a number that is set to more than double by the end of the decade (Henry, 2019). 
+systems launched since 2019 alone, a number that is set to more than double by the end of the decade <a href="#References">(Henry, 2019)</a>. 
 Thrusters vary from micronewton thrusters drawing tens of watts, to thousands of watts, using unusual propellants such 
 as liquid caesium or supercritical xenon, for applications ranging from 3U cubesats, to NASA’s 18 metric ton Lunar Gateway
 space station. This article will provide a general overview of the fundamentals of electric propulsion, and take a closer 
@@ -121,14 +121,14 @@ the NASA GRC / Aerojet Rocketdyne Advanced Electric Propulsion System as referen
 	  <p class="ex1">
       <pre>
 First theorized in 1911 by Konstantin Tsiolkovsky, it took until 1964 for the first use of an electric thruster on an operational 
-spacecraft — the Soviet Zond-2 (Antropov, 2017), with the first use on a commercial spacecraft almost 20 years later in 1981 (Mirtich, 1984).
+spacecraft — the Soviet Zond-2 <a href="#References">(Antropov, 2017)</a>, with the first use on a commercial spacecraft almost 20 years later in 1981 <a href="#References">(Mirtich, 1984)</a>.
 However, it took until the launch of USA-214 / AEHF-1 in 2010, the first in a constellation of 6 geostationary satellites that form 
 a secure communications network operated by the United States Space Force, for the use of electric propulsion — which will henceforth
 be referred to as EP — to really take off. AEHF-1 demonstrated the viability of a fully electric transfer to GEO after its primary
 chemical engine failed. When this occurred, the joint-USAF/Lockheed Martin team had to come up with a plan to use the spacecraft’s
 4.5kW Hall Effect Thruster, which was originally only intended to be used during the second phase of the spacecraft’s ascent to 
 geostationary orbit, to take the spacecraft the entire way there from its transfer orbit, a plan that ended up taking 11 months 
-longer than the original trajectory. (Ray, 2010), (Ray, 2011) 
+longer than the original trajectory. <a href="#References">(Ray, 2010), (Ray, 2011) </a>
 
 	      <p><img src="Figures/Fig1.png" alt="Figure 1 Artist's impression of USA-214 / AEHF-1" style="width:310px;height:248px;"></p>
       </pre>
@@ -139,8 +139,8 @@ longer than the original trajectory. (Ray, 2010), (Ray, 2011)
 	  <p class="ex1">
       <pre>
 The primary advantage of electric propulsion is that it permits engines to operate a efficiencies far above regular chemical engines. 
-The upper limit of chemical rocket engine efficiency is around 600 seconds of specific impulse (I_<sub>sp</sub>) (Clark, 1972), whereas electric 
-propulsion can range from low 100s to 10,000 seconds (Mazouffre, 2016). But what is efficiency? Why is it measured in seconds?  Why is 
+The upper limit of chemical rocket engine efficiency is around 600 seconds of specific impulse (I_<sub>sp</sub>) <a href="#References">(Clark, 1972)</a>, whereas electric 
+propulsion can range from low 100s to 10,000 seconds <a href="#References">(Mazouffre, 2016)</a>. But what is efficiency? Why is it measured in seconds?  Why is 
 it important? And how is it calculated? To understand this, we must first understand the ideal rocket equation.
 	      <math display="block" class="tml-display" style="display:block math;">
   <mrow>
@@ -236,12 +236,12 @@ FEEP thrusters are mechanically simple, and can be manufactured at extremely sma
 being applied across a sharp needle, which generates a Taylor-cone at the tip, spraying the propellant, which is usually a liquid 
 metal such as Gallium or Indium out at high velocities, which at high enough field strengths — 10<sup>10</sup> Vm<sup>-1</sup> or greater — evaporates 
 and ionizes the liquid metal, accelerating it towards the extractor electrode, spraying it out at over 100kms<sup>-1</sup> , allowing a specifiC
-impulse of several thousand seconds, albeit at a thrust ranging from several µN to around 1mN (Bock, 2014)
+impulse of several thousand seconds, albeit at a thrust ranging from several µN to around 1mN <a href="#References">(Bock, 2014)</a>
 	      <p><img src="Figures/Fig2.png" alt="Figure 2 Basic layout of a FEEP (Bock, 2014)" style="width:320px;height:272px;"></p>
 	      
 The thrust F and specific impulse I_sp of a FEEP can be approximated with the two equations below, where I is the net current,
 Ve is the potential over the emitter, qe/m is the mass-to-charge ratio of a single ion of the propellant, and g0 is the standard gravity. 
-f is a factor that accounts for beam spread, and η is the mass efficiency of the thruster. (Vasiljevich, 2008)
+f is a factor that accounts for beam spread, and η is the mass efficiency of the thruster. <a href="#References">(Vasiljevich, 2008)</a>
 	      <math display="block" class="tml-display" style="display:block math;">
   <mrow>
     <mi>F</mi>
@@ -324,15 +324,15 @@ f is a factor that accounts for beam spread, and η is the mass efficiency of th
 	  <h4 id="Practical Applications">Practical Applications</h4>
 	  <p class="ex1">
       <pre>
-A full implementation of the FEEP concept, the IFM 350 Nano, is a 190 times flight proven design as of May 2024 (Krejci, 2024). 
+A full implementation of the FEEP concept, the IFM 350 Nano, is a 190 times flight proven design as of May 2024 <a href="#References">(Krejci, 2024)</a>. 
 At its base is 28 needles, operating in a similar concept to the thruster illustrated above. The IFM Nano is sold as a 0.8U 
 (0.8U being 80mmx80mmx80mm), with integrated ion emitters (the needles), propellant reservoir, neutralizer, and power processing
 unit. At this size, it can be easily integrated into a CubeSat bus. It can operate at wattages ranging from 10 to 40W, with a
 peak thrust of 0.42mN with a resultant specific impulse of 3200s when supplied with 40W of power, but by dropping down to 30W
-a lower thrust of 0.25mN can be provided at an Isp of 5000s (D. Krejci, 2018). The neutralizer is required, on this and most
+a lower thrust of 0.25mN can be provided at an Isp of 5000s <a href="#References">(D. Krejci, 2018)</a>. The neutralizer is required, on this and most
 other electric thrusters, to make the exhaust of the thruster neutrally charged, so that it does not result in a negative charge 
 building up on the spacecraft. This would in turn would result in ions from the exhaust being drawn back to the spacecraft, 
-causing reduced thrust and erosion on the spacecraft. (Patterson, 2015) 
+causing reduced thrust and erosion on the spacecraft. <a href="#References">(Patterson, 2015)</a>
 	      <p><img src="Figures/Figs6-8.png" alt="Figures 6-8" style="width:750px;height:700px;"></p>    
 
       </pre>
@@ -361,7 +361,7 @@ from the cathode, creating a plume of neutrally charged plasma.
       <pre>
 The L3 Harris Aerojet Rocketdyne Advanced Electric Prolusion System, developed in partnership with the NASA Glenn Research Center 
 and the Jet Propulsion Laboratory, is the highest power flight-rated hall effect thruster ever built, operating at a peak of 12.5 
-kilowatts with a maximum I<sub>sp</sub> of 2826s and a peak thrust of 611mN (Frieman, 2021). 3 of these engines, along with 4 significantly 
+kilowatts with a maximum I<sub>sp</sub> of 2826s and a peak thrust of 611mN <a href="#References">(Frieman, 2021)</a>. 3 of these engines, along with 4 significantly 
 smaller BHT-6000s will propel NASA’s Gateway lunar space station when it launches in 2027.
 <p><img src="Figures/Table1Fig11.png" alt="Table 1 and Figure 11" style="width:700px;height:205px;"></p>  
       </pre>
